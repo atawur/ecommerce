@@ -25,6 +25,11 @@ class ProductController extends Controller
         $this->model = $product;
         
     }
+    public function all_product(){
+        $data = $this->model->with('brand')->get();
+        //dd($data);
+        return view("admin.product_list",compact('data'));
+    }
     public function index()
     {
         $data['categories'] = ProductCategory::all();

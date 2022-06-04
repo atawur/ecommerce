@@ -39,6 +39,7 @@ Route::middleware([
     Route::delete("/product_delete/{id}",[ProductCategoryController::class,"destroy"])->name("delete");
     Route::get("/product_view/{id}",[ProductCategoryController::class,"show"])->name("show");
     Route::get("/product",[ProductController::class,"index"])->name("product");
+    Route::get("/product_list",[ProductController::class,"all_product"])->name("product_list");
     Route::post("/product",[ProductController::class,"store"])->name("product.store");
 
 });

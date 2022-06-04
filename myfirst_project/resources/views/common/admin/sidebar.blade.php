@@ -50,9 +50,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
+                <a href="{{route('product_list')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
+                  <p>All product</p>
                 </a>
               </li>
               <li class="nav-item">
