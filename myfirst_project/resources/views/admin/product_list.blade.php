@@ -8,6 +8,8 @@
       <th scope="col">sl</th>
       <th scope="col">Name</th>
       <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Category</th>
       <th scope="col">Buying Price</th>
       <th scope="col">Selling Price</th>
       <th scope="col">Discount</th>
@@ -19,6 +21,8 @@
             <td>{{$loop->iteration}}</td>
             <td>{{$product->name}}</td>
             <td>{{$product->brand->name}}</td>
+            <td>{{$product->model->name}}</td>
+            <td>{{$product->category->name}}</td>
             <td>{{$product->buying_price}}</td>
             <td>{{$product->selling_price}}</td>
             <td>{{$product->discount}}</td>

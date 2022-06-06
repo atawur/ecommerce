@@ -23,10 +23,9 @@ class ProductController extends Controller
     public function __construct(Product $product)
     {
         $this->model = $product;
-        
     }
     public function all_product(){
-        $data = $this->model->with('brand')->get();
+        $data = $this->model->with('brand','model','category')->get();
         //dd($data);
         return view("admin.product_list",compact('data'));
     }
