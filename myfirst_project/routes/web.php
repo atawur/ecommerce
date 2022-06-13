@@ -42,4 +42,21 @@ Route::middleware([
     Route::get("/product_list",[ProductController::class,"all_product"])->name("product_list");
     Route::post("/product",[ProductController::class,"store"])->name("product.store");
 
+    /*Product Brand Routing */
+    Route::get("product_brand",[BrandController::class,"create"])->name("product_brand");
+    Route::post("store_brand",[BrandController::class,"store"])->name("store_brand");   
+    Route::get("view_brand/{id}",[BrandController::class,"show"])->name("view_brand");
+    Route::get("edit_brand/{id}",[BrandController::class,"edit"])->name("edit_brand");
+    Route::put("update_brand/{id}",[BrandController::class,"update"])->name("update_brand");
+    Route::delete("delete_brand/{id}",[BrandController::class,"destroy"])->name("delete_brand");
+    
+    /*Product Model Routing */
+    Route::get("productModel",[ProductModelController::class,"create"])->name("productModel");
+    Route::post("store_productModel",[ProductModelController::class,"store"])->name("store_productModel");
+    Route::get("view_productModel/{id}",[ProductModelController::class,"show"])->name("view_productModel");
+    Route::get("edit_productModel/{id}",[ProductModelController::class,"edit"])->name("edit_productModel");
+    Route::put("update_productModel/{id}",[ProductModelController::class,"update"])->name("update_productModel");
+    Route::delete("delete_productModel/{id}",[ProductModelController::class,"destroy"])->name("delete_productModel");
+
+
 });
