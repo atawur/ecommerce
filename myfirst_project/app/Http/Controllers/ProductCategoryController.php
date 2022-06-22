@@ -36,7 +36,7 @@ class ProductCategoryController extends Controller
         //dd("here");
 
         $data = $this->model->all();
-        return view("admin.product_category",compact('data'));
+        return view("admin.product_category.product_category",compact('data'));
     }
 
     /**
@@ -73,8 +73,9 @@ class ProductCategoryController extends Controller
      */
     public function show($id)
     {
+        $id = base64_decode($id);
         $category = $this->model->find($id);
-        return view('admin.details',$category);
+        return view('admin.product_category.details',$category);
     }
 
     /**
@@ -85,8 +86,9 @@ class ProductCategoryController extends Controller
      */
     public function edit($id)
     {
+        $id = base64_decode($id);
         $category = $this->model->find($id);
-        return view('admin.product_category_edit',$category);
+        return view('admin.product_category.edit_product_category',$category);
         //
     }
 

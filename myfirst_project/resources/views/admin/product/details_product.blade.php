@@ -47,15 +47,15 @@
                         </tr>
                         <tr>
                             <th>Product Category:</th>
-                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->category_id }}</td>
+                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->category->name }}</td>
                         </tr>
                         <tr>
                             <th>Brand:</th>
-                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->brand_id }}</td>
+                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->brand->name }}</td>
                         </tr>
                         <tr>
                             <th>Model:</th>
-                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->model_id }}</td>
+                            <td style="white-space:pre-wrap; word-wrap:break-word">{{ $product->model->name }}</td>
                         </tr>
                         <tr>
                             <th>Descriptions:</th>

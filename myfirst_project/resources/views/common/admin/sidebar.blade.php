@@ -50,6 +50,88 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{route('manage_product')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Manage Product</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+              Category
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('product_category')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+              Brand
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('product_brand')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Brand</p>
+                </a>
+              </li>             
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+              Model
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('productModel')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Model</p>
+                </a>
+              </li>             
+             
+            </ul>
+          </li>
+          
+        </ul>
+        {{-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p>
+                Product
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('product')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Add Product</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('product_list')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All product</p>
@@ -94,7 +176,7 @@
             </ul>
           </li>
           
-        </ul>
+        </ul> --}}
       </nav>
       <!-- /.sidebar-menu -->
     </div>

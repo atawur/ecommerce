@@ -34,7 +34,7 @@
               <th>{{$loop->iteration}}</th>
               <td >{{$val->name}}</td>                 
               <td>{{($val->brand->name)}}</td>
-              <td>{{($val->model_id)}}</td>
+              <td>{{($val->model->name)}}</td>
               <td>{{($val->status_id)}}</td>
               <td> 
                 <div class="d-flex">                                                  

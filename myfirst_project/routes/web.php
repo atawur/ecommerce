@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductModelController;
 
 
 /*
@@ -23,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get("/home",[HomeController::class,"showHomePage"]);
-Route::get("dashboard",[DashBoardController::class,"index"]);
+Route::get("dashboard",[DashBoardController::class,"index"])->name('dashboard');
 Route::get("report",[DashBoardController::class,"dasboard_report"]);
 
 Route::middleware([
@@ -32,16 +34,14 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
+    /*Product Category Routing */
     Route::get("/product_category",[ProductCategoryController::class,"create"])->name("product_category");
     Route::post("/product_category",[ProductCategoryController::class,"store"])->name("category-save");
     Route::get("/product_edit/{id}",[ProductCategoryController::class,"edit"])->name("edit");
     Route::put("/product_edit/{id}",[ProductCategoryController::class,"update"])->name("update");
     Route::delete("/product_delete/{id}",[ProductCategoryController::class,"destroy"])->name("delete");
-    Route::get("/product_view/{id}",[ProductCategoryController::class,"show"])->name("show");
-    Route::get("/product",[ProductController::class,"index"])->name("product");
-    Route::get("/product_list",[ProductController::class,"all_product"])->name("product_list");
-    Route::post("/product",[ProductController::class,"store"])->name("product.store");
-
+    Route::get("/product_view/{id}",[ProductCategoryController::class,"show"])->name("show");   
+    
     /*Product Brand Routing */
     Route::get("product_brand",[BrandController::class,"create"])->name("product_brand");
     Route::post("store_brand",[BrandController::class,"store"])->name("store_brand");   
@@ -58,5 +58,14 @@ Route::middleware([
     Route::put("update_productModel/{id}",[ProductModelController::class,"update"])->name("update_productModel");
     Route::delete("delete_productModel/{id}",[ProductModelController::class,"destroy"])->name("delete_productModel");
 
+    /*Product Routing */
+    Route::get("product",[ProductController::class,"index"])->name("product");
+    Route::post("product",[ProductController::class,"store"])->name("product.store");
+    Route::get("manage_product",[ProductController::class,"show"])->name("manage_product");
+    Route::get("view_product/{id}",[ProductController::class,"view_product"])->name("view_product");
+    Route::get("edit_product/{id}",[ProductController::class,"edit"])->name("edit_product");
+    Route::put("update_product/{id}",[ProductController::class,"update"])->name("update_product");
+    Route::delete("delete_product/{id}",[ProductController::class,"destroy"])->name("delete_product");
+   
 
 });

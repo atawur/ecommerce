@@ -66,7 +66,7 @@
               <tr>
                   <th>{{$loop->iteration}}</th>
                   <td >{{$val->name}}</td>                 
-                  <td>{{($val->brand_id)}}</td>
+                  <td>{{($val->brand->name)}}</td>
                   <td>{{($val->status_id)}}</td>
                   <td> 
                     <div class="d-flex">                                                  
